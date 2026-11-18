@@ -86,6 +86,21 @@
   .v b{display:block;margin-bottom:4px}
   .v span{color:var(--muted);font-size:.9rem}
 
+  /* Precios */
+  .prices{display:grid;gap:16px}
+  @media(min-width:760px){.prices{grid-template-columns:repeat(2,1fr)}}
+  .price{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px;display:flex;flex-direction:column}
+  .price.hl{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset}
+  .price .pn{font-weight:800;font-size:1.15rem}
+  .price .pf{font-size:.82rem;color:var(--muted);margin-bottom:12px}
+  .price .amt{font-size:2.2rem;font-weight:850;letter-spacing:-.02em;line-height:1}
+  .price .amt small{font-size:.95rem;font-weight:600;color:var(--muted)}
+  .price .from{font-size:.78rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.06em}
+  .price .extra{color:var(--muted);font-size:.9rem;margin:6px 0 14px}
+  .price .feat{margin-bottom:18px;flex:1}
+  .price .btn{justify-content:center}
+  .note{color:var(--muted);font-size:.85rem;margin-top:18px}
+
   /* Pasos */
   .steps{counter-reset:s;display:grid;gap:14px}
   .step{display:flex;gap:16px;align-items:flex-start}
@@ -279,8 +294,76 @@
     </div>
   </section>
 
+  <!-- PRECIOS -->
+  <section id="precios">
+    <div class="wrap">
+      <h2>Precios claros</h2>
+      <p class="sub">Sin permanencia: pagas mes a mes y lo dejas cuando quieras. Instalación y puesta en marcha incluidas.</p>
+      <div class="prices">
+
+        <div class="price">
+          <div class="pn">📊 MiContable</div>
+          <div class="pf">Cuentas y cierres del taxi</div>
+          <div class="from">Desde</div>
+          <div class="amt">9 € <small>/mes por taxi</small></div>
+          <div class="extra">Flotas: precio por vehículo a consultar</div>
+          <ul class="feat">
+            <li>Conductores y porcentajes ilimitados</li>
+            <li>Informes PDF mensuales y anuales</li>
+            <li>Copia de seguridad en la nube</li>
+          </ul>
+          <a class="btn btn-ghost js-wa" href="#">Pedir demo</a>
+        </div>
+
+        <div class="price hl">
+          <div class="pn">🚖 MisReservas</div>
+          <div class="pf">Reservas online para tu taxi</div>
+          <div class="from">Desde</div>
+          <div class="amt">19 € <small>/mes por taxi</small></div>
+          <div class="extra">Tus clientes y hoteles reservan gratis</div>
+          <ul class="feat">
+            <li>Avisos push al instante</li>
+            <li>Seguimiento “En camino” para el cliente</li>
+            <li>Panel para pasar servicios a compañeros</li>
+          </ul>
+          <a class="btn btn-main js-wa" href="#">Pedir demo</a>
+        </div>
+
+        <div class="price">
+          <div class="pn">📅 Agenda de citas</div>
+          <div class="pf">Para masajistas, fisios, peluquerías…</div>
+          <div class="from">Desde</div>
+          <div class="amt">19 € <small>/mes</small></div>
+          <div class="extra">Con tu nombre y tu logo</div>
+          <ul class="feat">
+            <li>Reservas por QR y recordatorios automáticos</li>
+            <li>Caja mensual exportable a Excel</li>
+            <li>Sin comisiones por cliente nuevo</li>
+          </ul>
+          <a class="btn btn-ghost js-wa" href="#">Pedir demo</a>
+        </div>
+
+        <div class="price">
+          <div class="pn">🛠️ App a medida</div>
+          <div class="pf">Una app nueva para tu negocio</div>
+          <div class="from">Desde</div>
+          <div class="amt">350 € <small>pago único</small></div>
+          <div class="extra">+ mantenimiento desde 15 €/mes</div>
+          <ul class="feat">
+            <li>Presupuesto cerrado antes de empezar</li>
+            <li>Instalable en el móvil, con tus datos en tu cuenta</li>
+            <li>Mantenimiento: copias, ajustes y soporte directo</li>
+          </ul>
+          <a class="btn btn-ghost js-wa" href="#">Pedir presupuesto</a>
+        </div>
+
+      </div>
+      <p class="note">Precios sin IVA. Los servicios con coste externo (por ejemplo, avisos por SMS) se presupuestan aparte.</p>
+    </div>
+  </section>
+
   <!-- PASOS -->
-  <section>
+  <section class="sec-alt">
     <div class="wrap">
       <h2>Cómo trabajamos</h2>
       <p class="sub">Sin compromiso hasta que lo veas funcionando.</p>
@@ -294,7 +377,7 @@
   </section>
 
   <!-- SOBRE MÍ -->
-  <section class="sec-alt">
+  <section>
     <div class="wrap about">
       <div class="avatar">JL</div>
       <div>
@@ -306,7 +389,7 @@
   </section>
 
   <!-- CONTACTO -->
-  <section id="contacto" class="contact">
+  <section id="contacto" class="contact sec-alt">
     <div class="wrap">
       <h2>¿Hablamos?</h2>
       <p class="sub">Cuéntame qué necesitas y te respondo lo antes posible. Sin compromiso.</p>
@@ -329,8 +412,8 @@
 
 <script>
   /* ======= TUS DATOS: cambia solo estas tres líneas ======= */
-  const TELEFONO = "+34 633105673";          // con el 34 delante, sin espacios ni +
-  const EMAIL    = "jlcp.peri13@gmail.com";
+  const TELEFONO = "34600000000";          // con el 34 delante, sin espacios ni +
+  const EMAIL    = "tucorreo@gmail.com";
   const MENSAJE  = "Hola José Luis, he visto tu web y me interesa una app para mi negocio.";
   /* ======================================================== */
 
